@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- font-awesome icons  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+  <!--Link for Favicon image-->
+  <link rel="icon" type="image/png" href="/cool-and-cool/img/V-Natural_LOG_page-0001-removebg-preview.png">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    /* Additional CSS for the login form */
+    /* New css  */
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+    header {
+            color: black;
+            text-align: center;
+            padding: 8rem 0;
+        }
+
+        #contactForm {
+            display: flex;
+            justify-content: space-between;
+            max-width: 700px;
+            justify-content: center;
+            margin-left: 400px;
+            margin-top: 50px;
+            /* margin: -6rem auto; */
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 4rem;
+        }
+
+        form {
+            flex: 1;
+            max-width: 600px;
+            margin-right: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-image: linear-gradient(to right, #FFC0CB, #0000FF);
+            color: #fff;
+            cursor: pointer;
+            max-width: 100px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .copyright {
+            font-size: 0.8em;
+        }
+
+        .password-toggle {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+        }
+        /* Media query  */
+
+        @media only screen and (max-width: 768px) {
+    #contactForm {
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      padding: 1rem;
+    }
+
+    form {
+      margin-right: 0;
+    }
+
+    label,
+    input,
+    textarea {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    input[type="submit"] {
+      max-width: 24%;
+      /* margin-left: 60px; */
+      
+    }
+  }
+  </style>
+
+  <title>Login</title>
+
+</head>
+
+<body>
+
+  <section class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="index.html">
+          <img src="./img/V-Natural_LOG_page-0001-removebg-preview.png" alt="" width="100px">
+        </a>
+      </div>
+      <nav>
+        <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+        <ul class="nav-list">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="products.html">Products</a>
+
+          </li>
+
+          <li>
+            <a href="contactus.html">Contact</a>
+          </li>
+
+          <li>
+            <a href="login.html">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+
+   <!-- New one  -->
+   <h1 class="contact" style="text-align: center;margin-top: 25px;">Login </h1>
+  </header>
+
+  <!-- <section id="contactForm">
+      <form action="#" method="post">
+          
+
+          <label for="email">Email:</label>
+          <input type="email" id="exampleInputEmail1" name="email" required>
+
+          <label for="password">Password</label>
+          <input type="text" id="exampleInputPassword1" name="password" required><br><br>
+
+         
+          <input type="submit" value="Submit">
+      </form>
+
+      
+  </section> -->
+
+<!-- 
+  <section id="contactForm">
+    <form action="#" method="post" onsubmit="return validateForm()">
+      <label for="email">Email:</label>
+      <input type="email" id="exampleInputEmail1" name="email" required>
+      <span id="emailError" style="color: red;"></span>
+  
+      <label for="password">Password:</label>
+      <input type="password" id="exampleInputPassword1" name="password" required>
+      <span id="passwordError" style="color: red;"></span><br><br>
+  
+      <input type="submit" value="Submit">
+    </form>
+  </section> -->
+  <section id="contactForm">
+    <form action="#" method="post" onsubmit="return validateForm()">
+      <label for="email">Email:</label>
+      <input type="email" id="exampleInputEmail1" name="email" required>
+      <span id="emailError" style="color: red;"></span>
+
+      <label for="password">Password:</label>
+      <div style="position: relative;">
+        <input type="password" id="exampleInputPassword1" name="password" required>
+        <i class="far fa-eye password-toggle" id="passwordToggle"></i>
+      </div>
+      <span id="passwordError" style="color: red;"></span><br><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <!-- ... (your existing body content) ... -->
+
+  <script>
+    // ... (your existing script content) ...
+
+    // Function to toggle password visibility
+    document.getElementById("passwordToggle").addEventListener("click", function () {
+      var passwordInput = document.getElementById("exampleInputPassword1");
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+      } else {
+        passwordInput.type = "password";
+      }
+    });
+  </script>
+
+  <!-- Footer -->
+  <section id="foott">
+    <footer class="bg-dark text-white main_footer">
+      <div class="container py-0">
+        <div class="row" id="foot">
+          <!-- Column 1: Company Information -->
+          <div class="col-lg-4 col-md-4 mt-4">
+            <p><img src="./img/logo.png" alt="" width="100px" height="70px"></p>
+            <p>
+              No. 1708, KH No. 1189,<br>
+              5th cross, 6th main,<br>
+              Shivaramiah layout,<br>
+              Bengaluru-560043
+            </p>
+          </div>
+  
+          <!-- Column 2: Navigation -->
+          <div class="col-lg-4 col-md-4 mt-5 foot2">
+            <h5 style="color: #efdddd">Navigation</h5>
+            <ul class="list-unstyled py-1">
+              <li class="py-1">
+                <i class="fa-solid fa-house" style="color: #efdddd;"></i>
+                <a href="index.html">Home</a>
+              </li>
+              <li class="py-1">
+                <i class="fa-solid fa-address-card" style="color: #efdddd;"></i>
+                <a href="about.html">About</a>
+              </li>
+              <li class="py-1">
+                <i class="fa-brands fa-product-hunt" style="color: #efdddd;"></i>
+                <a href="products.html">Products</a>
+              </li>
+              <li class="py-1">
+                <i class="fa-solid fa-phone" style="color: #efdddd;"></i>
+                <a href="contactus.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+  
+          <!-- Column 3: Copyright -->
+          <div class="col-lg-4 col-md-4 mt-5" id="foot3" >
+            <a href="mailto:info@vnaturalproducts.com">
+              <i class="fa-solid fa-envelope" style="color: #007bff;"></i> info@vnaturalproducts.com<br>
+              <span style="margin-top: 15px;"> <i class="fa-solid fa-phone" style="color: #007bff;"></i> +91 99011 04347 </span>
+            </a>
+          </div>
+        </div>
+  
+        <!-- Copyright and Social Icons -->
+        <div class="row b_part">
+          <div class="col-lg-12 col-md-12" style="text-align: center; color: #efdddd; padding: 3px 15px; font-size: 19px; ">
+            <i class="fa-brands fa-facebook"></i>&nbsp;
+            <i class="fa-brands fa-instagram"></i>&nbsp;
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+        </div>
+  
+        <!-- Copyright Text -->
+        <div class="row b_part">
+          <div class="col-lg-12 col-md-12" style="text-align: center; padding: 3px 15px; font-size: 19px; ">
+            <p style="margin-top: 10px;">&copy; 2023 V-Natural. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  
+  <!-- Footer End  -->
+
+  <script src="./js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
+
+<script>
+
+
+  
+
+  function validateForm() {
+    var email = document.getElementById("exampleInputEmail1").value;
+    var password = document.getElementById("exampleInputPassword1").value;
+
+    // Reset error messages
+    document.getElementById("emailError").innerHTML = "";
+    document.getElementById("passwordError").innerHTML = "";
+    
+    function isValidEmail(email) 
+  {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+
+    if (!isValidEmail(email)) {
+      document.getElementById("emailError").innerHTML = "Please enter a valid email address.";
+      return false;
+    }
+
+    if (password.length < 6) {
+      document.getElementById("passwordError").innerHTML = "Password must be at least 6 characters long.";
+      return false;
+    }
+
+    return true;
+  }
+
+
+
+
+</script>
+</body>
+
+</html>

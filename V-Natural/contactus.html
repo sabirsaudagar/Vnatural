@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+
+    <!--Link for Favicon image-->
+    <link rel="icon" type="image/png" href="/cool-and-cool/img/V-Natural_LOG_page-0001-removebg-preview.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Contact Us</title>
+    <style>
+
+        body 
+        {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header 
+        {
+            color: black;
+            text-align: center;
+            padding: 8rem 0;
+        }
+
+        #contactForm 
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            margin: -6rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 4rem;
+        }
+
+        form {
+            flex: 1;
+            max-width: 600px;
+            margin-right: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-image: linear-gradient(to right, #FFC0CB, #0000FF);
+            color: #fff;
+            cursor: pointer;
+            max-width: 100px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover 
+        {
+            background-color: #555;
+        }
+
+        .map-container {
+            flex: 1;
+        }
+
+        iframe {
+            width: 90%;
+            height: 280px;
+            border: 0;
+            margin-left: 40px;
+            margin-top: 74px;
+        }
+        .copyright {
+            font-size: 0.8em;
+        }
+        ul li 
+        {
+           padding: 6px 5px;
+           font-size: 16px;
+        }
+
+
+        /* media query  */
+        @media only screen and (max-width: 768px) {
+    #contactForm {
+        flex-direction: column; 
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    form {
+        margin-right: 0; 
+    }
+
+    iframe {
+        width: 100%; 
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <section class="navigation">
+        <div class="nav-container">
+          <div class="brand">
+            <a href="index.html">
+              <img src="./img/V-Natural_LOG_page-0001-removebg-preview.png" alt="" width="100px">
+            </a>
+          </div>
+          <nav>
+            <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+            <ul class="nav-list">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="about.html">About</a>
+              </li>
+              <li>
+                <a href="products.html">Products</a>
+               
+              </li>
+    
+              <li>
+                <a href="contactus.html">Contact</a>
+              </li>
+    
+              <li>
+                <a href="login.html">Login</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+     
+      <!-- Navbar End  -->
+
+    <header>
+        <h1 class="contact">Contact Us</h1>
+    </header>
+
+     <section id="contactForm">
+        
+        <ul>
+          <h3>Contact Information:</h3><br>
+          <li>Address: ABC Industries LLC, Al Ghail Industrial Area, Ras Al Khaima, UAE</li>
+          <li>Tel. No: +971 72589 175</li>
+          <li>Fax. No: +971 72589 176</li>
+          <li>Support: inquiry@coolandcool.com</li>
+          <li>Address: ABC International Ltd. Jabel Ali Free Zone</li>
+          <li>Tel. No: +971 4887 1522</li>
+          <li>Fax. No: +971 4887 1136</li>
+          <li>Support: inquiry@coolandcool.com</li>
+        </ul>
+
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-74.005972!3d40.712776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDI4JzA2LjkiTiA3NMKwMDYnMjcuMiJX!5e0!3m2!1sen!2sus!4v1566925465276!5m2!1sen!2sus"
+                allowfullscreen></iframe>
+        </div>
+    </section> 
+
+
+
+
+    <!-- Footer -->
+    <section id="foott">
+      <footer class="bg-dark text-white main_footer">
+        <div class="container py-0">
+          <div class="row" id="foot">
+            <!-- Column 1: Company Information -->
+            <div class="col-lg-4 col-md-4 mt-4"">
+              <p><img src="./img/logo.png" alt="" width="100px" height="70px"></p>
+              <p>
+                No. 1708, KH No. 1189,<br>
+                5th cross, 6th main,<br>
+                Shivaramiah layout,<br>
+                Bengaluru-560043
+              </p>
+            </div>
+    
+            <!-- Column 2: Navigation -->
+            <div class="col-lg-4 col-md-4 mt-5 foot2">
+              <h5 style="color: #efdddd">Navigation</h5>
+              <ul class="list-unstyled py-1">
+                <li class="py-1">
+                  <i class="fa-solid fa-house" style="color: #efdddd;"></i>
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="py-1">
+                  <i class="fa-solid fa-address-card" style="color: #efdddd;"></i>
+                  <a href="about.html">About</a>
+                </li>
+                <li class="py-1">
+                  <i class="fa-brands fa-product-hunt" style="color: #efdddd;"></i>
+                  <a href="products.html">Products</a>
+                </li>
+                <li class="py-1">
+                  <i class="fa-solid fa-phone" style="color: #efdddd;"></i>
+                  <a href="contactus.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+    
+            <!-- Column 3: Copyright -->
+            <div class="col-lg-4 col-md-4 mt-5" id="foot3" >
+              <a href="mailto:info@vnaturalproducts.com">
+                <i class="fa-solid fa-envelope" style="color: #007bff;"></i> info@vnaturalproducts.com<br>
+                <span style="margin-top: 15px;"> <i class="fa-solid fa-phone" style="color: #007bff;"></i> +91 99011 04347 </span>
+              </a>
+            </div>
+          </div>
+    
+          <!-- Copyright and Social Icons -->
+          <div class="row b_part">
+            <div class="col-lg-12 col-md-12" style="text-align: center; color: #efdddd; padding: 3px 15px; font-size: 19px; ">
+              <i class="fa-brands fa-facebook"></i>&nbsp;
+              <i class="fa-brands fa-instagram"></i>&nbsp;
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+          </div>
+    
+          <!-- Copyright Text -->
+          <div class="row b_part">
+            <div class="col-lg-12 col-md-12" style="text-align: center; padding: 3px 15px; font-size: 19px; ">
+              <p style="margin-top: 10px;font-size: 14px;">&copy; 2023 V-Natural. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+     <!-- Footer section End  -->
+      <script src="./js/app.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Link for Favicon image-->
+  <link rel="icon" type="image/png" href="/cool-and-cool/img/V-Natural_LOG_page-0001-removebg-preview.png">
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Products</title>
+
+  <style>
+    .Heading-1{
+    margin: 9rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5rem;
+}
+
+.outer-box {
+  width: 300px;
+  height: 300px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  border-radius: 1rem;
+}
+
+.inner-box {
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.inner-box:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.text-property {
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  right: 1rem;
+}
+
+.text-property ul {
+  padding: 0;
+}
+
+.text-property li {
+  font-size: 18px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+
+    button {
+      /* padding: 10px 20px; */
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: .5rem;
+      position: relative;
+      color: rgb(42, 41, 41);
+      background-color: black;
+      
+    }
+
+
+    .product-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 10px;
+    }
+
+    .product-card {
+      text-align: center;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      border-radius: 5px;
+      width: 30%; /* Set a fixed width for each product card */
+      box-sizing: border-box; /* Include padding and border in the width */
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .product-description {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: 5% auto;
+      padding: 20px;
+      width: 50%;
+      height: 80%;
+    }
+
+    .modal-img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .close {
+      color: black;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="./index.html"><img src="./img/logo.png" alt="" width="120px" height="80px"></a>
+      </div>
+      <nav>
+        <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+        <ul class="nav-list">
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./about.html">About</a>
+          </li>
+          <li>
+            <a href="./products.html">Products</a>
+          </li>
+          <li>
+            <a href="./contactus.html">Contact</a>
+          </li>
+          </li>
+          <li>
+            <a href="./login.html">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <section class="container-fluid" id="products">
+    <h1 class="display-4 text-center">Products</h1>
+    <p class="text-center py-3"><a href="./index.html" class="nav-item text-black-50">Home</a> <span class="px-3">&gt;</span> <a href="products.html" class="nav-item text-black-50">Products</a></p>
+    <hr>
+    <div class="row">
+      <div class="col-md-4" id="button-col">
+        <div class="button-container container">
+          <ul>
+            <li>
+              <button onclick="displayAllProducts()">Show All Products</button>
+            </li>
+            <hr>
+            <li>
+              <button onclick="showProducts('skinCare')">Skin Care</button>
+            </li>
+            <hr>
+            <li>
+              <button onclick="showProducts('faceCare')">Face Care</button>
+            </li>
+            <hr>
+            <li>
+              <button onclick="showProducts('facialTissue')">Facial Tissues</button>
+            </li>
+            <hr>
+            <li>
+              <button onclick="showProducts('generalCare')">General Care</button>
+            </li>
+            <hr>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-8 m-0">
+        <!-- Modal -->
+        <div id="zoom-modal" class="modal ">
+          <div class="modal-content w-50 object-fit-cover">
+            <span class="close" onclick="closeZoomModal()">&times;</span>
+            <img id="modal-img" class="modal-img" alt="Zoomed Image">
+          </div>
+        </div>
+        <div id="product-container" class="product-container">
+          <!-- Product information will be displayed here by javascript-->
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white">
+    <div class="container py-5">
+      <div class="row">
+        <!-- Column 1: Company Information -->
+        <div class="col-md-4">
+          <p><img src="./img/logo.png" alt="" width="100px" height="70px"></p>
+          <p>
+           
+        No. 1708, KH No. 1189,<br>
+         5th cross, 6th main, <br>
+         Shivaramiah layout,<br>
+          Bengaluru-560043
+          </p>
+        </div>
+  
+        <!-- Column 2: Navigation -->
+        <div class="col-md-4 mt-5">
+          <h5>Navigation</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+          </ul>
+        </div>
+  
+        <!-- Column 3: Copyright -->
+        <div class="col-md-4 text-center mt-5">
+          Mail: <a href="mailto:info@vnaturalproducts.com"><i class="fas fa-regular-envelope"></i>info@vnaturalproducts.com</a><br>
+          Contact:<a href="tel:+91 99011 04347"> +91 99011 04347</a>
+
+          <p style="margin-top: 10rem;" >&copy; 2023 V-Natural. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

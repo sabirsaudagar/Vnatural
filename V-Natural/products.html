@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Link for Favicon image-->
+  <link rel="icon" type="image/png" href="/cool-and-cool/img/V-Natural_LOG_page-0001-removebg-preview.png">
+
+  <!-- Font awesome icons  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Products</title>
+
+  <style>
+    .Heading-1{
+    margin: 9rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5rem;
+}
+
+.outer-box {
+  width: 300px;
+  height: 300px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  border-radius: 1rem;
+}
+
+.inner-box {
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.inner-box:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.text-property {
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  right: 1rem;
+}
+
+.text-property ul {
+  padding: 0;
+}
+
+.text-property li {
+  font-size: 18px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+
+    button 
+    {
+      /* padding: 10px 20px; */
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: .5rem;
+      position: relative;
+      color: rgb(42, 41, 41);
+      background-color: black;
+      
+    }
+
+
+    .product-container 
+    {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 10px;
+    }
+
+    .product-card 
+    {
+      text-align: center;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      border-radius: 5px;
+      width: 30%;
+      box-sizing: border-box; 
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .product-description {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: 5% auto;
+      padding: 20px;
+      width: 50%;
+      height: 80%;
+    }
+
+    .modal-img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .close {
+      color: black;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="index.html">
+          <img src="./img/V-Natural_LOG_page-0001-removebg-preview.png" alt="" width="100px">
+        </a>
+      </div>
+      <nav>
+        <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+        <ul class="nav-list">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="products.html" >Products</a>
+           
+          </li>
+
+          <li>
+            <a href="contactus.html">Contact</a>
+          </li>
+
+          <li>
+            <a href="login.html">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <section class="container-fluid m-4">
+    <h1 class="display-4 text-center">Products</h1>
+
+    <div class="row">
+      <div class="col-4">
+        <div class="button-container container">
+          <ul>
+            <li>
+              <button onclick="showProducts('allProducts')">All Products</button>
+            </li>
+            <hr>
+            <li>
+              <button onclick="showProducts('skinCare')">Skin Care</button>
+            </li>
+            <hr>
+            <li>
+              <button onclick="showProducts('faceCare')">Face Care</button>
+            </li>
+            <hr>
+            <li>
+              <button onclick="showProducts('facialTissue')">Facial Tissues</button>
+            </li>
+            <hr>
+            <li>
+              <button onclick="showProducts('generalCare')">General Care</button>
+            </li>
+            <hr>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-8 container">
+        <!-- Modal -->
+        <div id="zoom-modal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeZoomModal()">&times;</span>
+            <img id="modal-img" class="modal-img" alt="Zoomed Image">
+          </div>
+        </div>
+        <div id="product-container" class="product-container">
+          <!-- Product information will be displayed here by javascript-->
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <!-- Footer -->
+  <section id="foott">
+    <footer class="bg-dark text-white main_footer">
+      <div class="container py-0">
+        <div class="row" id="foot">
+          <!-- Column 1: Company Information -->
+          <div class="col-lg-4 col-md-4 mt-4">
+            <p><img src="./img/logo.png" alt="" width="100px" height="70px"></p>
+            <p>
+              No. 1708, KH No. 1189,<br>
+              5th cross, 6th main,<br>
+              Shivaramiah layout,<br>
+              Bengaluru-560043
+            </p>
+          </div>
+  
+          <!-- Column 2: Navigation -->
+          <div class="col-lg-4 col-md-4 mt-5 foot2">
+            <h5 style="color: #efdddd">Navigation</h5>
+            <ul class="list-unstyled py-1">
+              <li class="py-1">
+                <i class="fa-solid fa-house" style="color: #efdddd;"></i>
+                <a href="index.html">Home</a>
+              </li>
+              <li class="py-1">
+                <i class="fa-solid fa-address-card" style="color: #efdddd;"></i>
+                <a href="about.html">About</a>
+              </li>
+              <li class="py-1">
+                <i class="fa-brands fa-product-hunt" style="color: #efdddd;"></i>
+                <a href="products.html">Products</a>
+              </li>
+              <li class="py-1">
+                <i class="fa-solid fa-phone" style="color: #efdddd;"></i>
+                <a href="contactus.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+  
+          <!-- Column 3: Copyright -->
+          <div class="col-lg-4 col-md-4 mt-5" id="foot3" >
+            <a href="mailto:info@vnaturalproducts.com">
+              <i class="fa-solid fa-envelope" style="color: #007bff;"></i> info@vnaturalproducts.com<br>
+              <span style="margin-top: 15px;"><i class="fa-solid fa-phone" style="color: #007bff;"></i>+91 99011 04347 </span>
+            </a>
+          </div>
+        </div>
+  
+        <!-- Copyright and Social Icons -->
+        <div class="row b_part">
+          <div class="col-lg-12 col-md-12" style="text-align: center; color: #efdddd; padding: 3px 15px; font-size: 19px; ">
+            <i class="fa-brands fa-facebook"></i>&nbsp;
+            <i class="fa-brands fa-instagram"></i>&nbsp;
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+        </div>
+  
+        <!-- Copyright Text -->
+        <div class="row b_part">
+          <div class="col-lg-12 col-md-12" style="text-align: center; padding: 3px 15px; font-size: 19px; ">
+            <p style="margin-top: 10px;font-size: 14px;">&copy; 2023 V-Natural. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  
+ 
+  <script src="./js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Link for Favicon image-->
+  <link rel="icon" type="image/png" href="/cool-and-cool/img/V-Natural_LOG_page-0001-removebg-preview.png">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    /* Additional CSS for the login form */
+    .login-form-container {
+      max-width: 300px;
+      max-height: 200px;
+      margin: 200px auto;
+      padding: 100px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-form-container label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .login-form-container input {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .login-form-container button {
+      background-color: #4caf50;
+      color: black;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: large;
+      font-weight: 600;
+      position: relative;
+      top: 50px;
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+
+    .login-form-container button:hover {
+      color: white;
+      background-color: black;
+      transform: scale(1.1);
+      z-index: 2;
+    }
+
+    .login {
+      position: relative;
+      bottom: 40px;
+      right: 60px;
+      margin: 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+
+    .login:hover {
+      color: red;
+      transform: scale(1.1);
+      z-index: 2;
+    }
+  </style>
+
+  <title>Login</title>
+
+</head>
+
+<body>
+
+  <section class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <a href="./index.html"><img src="./img/logo.png" alt="" width="120px" height="80px"></a>
+      </div>
+      <nav>
+        <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+        <ul class="nav-list">
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+          <li>
+            <a href="./about.html">About</a>
+          </li>
+          <li>
+            <a href="./products.html">Products</a>
+          </li>
+          <li>
+            <a href="./contactus.html">Contact</a>
+          </li>
+          </li>
+          <li>
+            <a href="./login.html">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <div class="container  m-5 d-flex align-items-center justify-content-center">
+    <form class="w-50 ">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Enter email" required>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white">
+    <div class="container py-5">
+      <div class="row">
+        <!-- Column 1: Company Information -->
+        <div class="col-md-4">
+          <p><img src="./img/logo.png" alt="" width="100px" height="70px"></p>
+          <p>
+
+            No. 1708, KH No. 1189,<br>
+            5th cross, 6th main, <br>
+            Shivaramiah layout,<br>
+            Bengaluru-560043
+          </p>
+        </div>
+
+        <!-- Column 2: Navigation -->
+        <div class="col-md-4 mt-5">
+          <h5>Navigation</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Copyright -->
+        <div class="col-md-4 text-center mt-5">
+          Mail: <a href="mailto:info@vnaturalproducts.com"><i
+              class="fas fa-regular-envelope"></i>info@vnaturalproducts.com</a><br>
+          Contact:<a href="tel:+91 99011 04347"> +91 99011 04347</a>
+
+          <p style="margin-top: 10rem;">&copy; 2023 V-Natural. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="./js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
+
+<script>
+  function validateForm() {
+    var email = document.getElementById("exampleInputEmail1").value;
+    var password = document.getElementById("exampleInputPassword1").value;
+
+    if (!email || !isValidEmail(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+
+    if (!password || password.length < 6) {
+      alert("Password must be at least 6 characters long.");
+      return false;
+    }
+
+
+    return true;
+  }
+
+  function isValidEmail(email) {
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+</script>
+</body>
+
+</html>

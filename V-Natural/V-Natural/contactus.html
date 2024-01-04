@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Link for Favicon image-->
+    <link rel="icon" type="image/png" href="/cool-and-cool/img/V-Natural_LOG_page-0001-removebg-preview.png">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            color: black;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        #contactForm {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: -6rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 4rem;
+        }
+
+        form {
+            flex: 1;
+            max-width: 600px;
+            margin-right: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-image: linear-gradient(to right, #FFC0CB, #0000FF);
+            color: #fff;
+            cursor: pointer;
+            max-width: 100px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .map-container {
+            flex: 1;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1em;
+        }
+
+        .contact-info {
+            margin-bottom: 1em;
+        }
+
+        .copyright {
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="./index.html"><img src="./img/logo.png" alt="" width="120px" height="80px"></a>
+        </div>
+        <nav>
+          <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+          <ul class="nav-list">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./about.html">About</a>
+            </li>
+            <li>
+              <a href="./products.html">Products</a>
+            </li>
+            <li>
+              <a href="./contactus.html">Contact</a>
+            </li>
+            </li>
+            <li>
+              <a href="./login.html">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <header>
+        <h1 class="contact display-4">Contact Us</h1>
+        <p class="text-center py-3"><a href="./index.html" class="nav-item text-black-50">Home</a> <span class="px-3">&gt;</span> <a href="products.html" class="nav-item text-black-50">Contact</a></p>
+    <hr>
+    </header>
+
+    <section id="contactForm">
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-74.005972!3d40.712776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDI4JzA2LjkiTiA3NMKwMDYnMjcuMiJX!5e0!3m2!1sen!2sus!4v1566925465276!5m2!1sen!2sus"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white">
+        <div class="container py-5">
+          <div class="row">
+            <!-- Column 1: Company Information -->
+            <div class="col-md-4">
+              <p><img src="./img/logo.png" alt="" width="100px" height="70px"></p>
+              <p>
+               
+            No. 1708, KH No. 1189,<br>
+             5th cross, 6th main, <br>
+             Shivaramiah layout,<br>
+              Bengaluru-560043
+              </p>
+            </div>
+      
+            <!-- Column 2: Navigation -->
+            <div class="col-md-4 mt-5">
+              <h5>Navigation</h5>
+              <ul class="list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+              </ul>
+            </div>
+      
+            <!-- Column 3: Copyright -->
+            <div class="col-md-4 text-center mt-5">
+              Mail: <a href="mailto:info@vnaturalproducts.com"><i class="fas fa-regular-envelope"></i>info@vnaturalproducts.com</a><br>
+              Contact:<a href="tel:+91 99011 04347"> +91 99011 04347</a>
+    
+              <p style="margin-top: 10rem;" >&copy; 2023 V-Natural. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="./js/app.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+</body>
+
+</html>
